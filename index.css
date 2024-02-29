@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+:root {
+  --line-border-fill: hsl(97, 100%, 51%);
+  --line-border-empty: #000000;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #302c3b;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+
+.main{
+  border-style: solid;
+  height:16rem ;
+min-width: 33rem;
+ display: flex;
+align-items: center;
+justify-content: center;
+border-bottom-color: #fff;
+border-top-color: #fff;
+border-bottom-width: 12px;
+border-top-width: 12px;
+border-left-width: 12px;
+border-right-width: 12px;
+}
+.main:hover{
+  border-LEFT-color: #fff;
+border-right-color: #fff;
+border-top-color: black;
+border-bottom-color:black;
+
+
+}
+h1{
+  color: yellow;
+  text-align: center;
+}
+h1:hover{
+color: blue;
+}
+h2{
+  color: rgb(35, 209, 194);
+  font-size: 23px;
+  text-align: center;
+}
+h2:hover{
+  color: rgb(200, 244, 23);
+}
+.container {
+  text-align: center;
+border-radius: 20%;
+/* background-color: blue; */
+z-index: 99;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+}
+
+.progress-container::before {
+  content: '';
+  background-color: var(--line-border-empty,rgb(0, 0, 0));
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+
+
+.progress {
+  background-color: var(--line-border-fill);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.circle {
+  background-color: #000000;
+  color:#ebebeb;
+  border-radius: 20%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 1s ease;
+}
+
+.circle.active {
+  border-color: var(yellow);
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}
